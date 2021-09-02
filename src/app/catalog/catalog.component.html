@@ -1,0 +1,20 @@
+<h1>Catalog of Cakes</h1>
+<mat-grid-list cols="3">
+    <mat-grid-tile *ngFor="let cake of cakes; let i = index">
+        <mat-card class="card-size">
+            <mat-card-header>
+                <mat-card-title>{{ cake.name }}</mat-card-title>
+            </mat-card-header>
+            <img mat-card-image [src]="cake.image" [alt]="cake.name">
+            <mat-card-content>
+                <p class="card-text">{{ cake.description }}</p>
+            </mat-card-content>
+            <mat-card-actions class="d-flex justify-content-between">
+                <a [routerLink]="[cake.id]" mat-flat-button color="primary">SEE MORE</a>
+                <button mat-flat-button color="warn" (click)="removeCake(i)">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </mat-card-actions>
+        </mat-card>
+    </mat-grid-tile>
+</mat-grid-list>

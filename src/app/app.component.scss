@@ -1,0 +1,19 @@
+:host{
+    mat-toolbar
+    {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+
+        .mat-button
+        {
+            line-height: 2em;
+            font-size: 24px;
+        }
+    }
+
+    .app-container
+    {
+        padding: 30px 30px 50px;
+    }
+}

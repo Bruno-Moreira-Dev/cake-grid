@@ -1,0 +1,12 @@
+.adjust {
+    &-image {
+        height: 500px;
+    }
+    &-text {
+        width: 70%;
+    }
+    &-title,
+    &-rating {
+        margin: 10px 0 10px 40px;
+    }
+}

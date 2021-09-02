@@ -1,0 +1,18 @@
+<ng-container *ngFor="let cake of cakes">
+    <div *ngIf="cake.id === id">
+        <div class="d-flex justify-content-between m-3">
+            <h5 class="adjust-title">{{ cake.name }}</h5>
+            <button mat-fab color="primary" (click)="onGoBack()">
+                <mat-icon>chevron_left</mat-icon>
+            </button>
+        </div>
+        <div class="d-flex justify-content-around">
+            <img [src]="cake.image" [alt]="cake.name" class="adjust-image">
+            <p class="adjust-text">{{ cake.description }}</p>
+        </div>
+        <div class="adjust-rating">
+            <p>Rating: {{ cake.rate }}</p>
+            <mat-icon *ngFor="let i of [0,1,2,3,4]">{{ showIcon(i) }}</mat-icon>
+        </div>
+    </div>
+</ng-container>

@@ -1,0 +1,14 @@
+.card {
+    &-size {
+        width: 28rem;
+    }
+    &-text {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+img {
+    height: 320px;
+}
